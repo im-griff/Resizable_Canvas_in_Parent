@@ -1,18 +1,13 @@
 var divWidth, divHeight;
-var sketchCiner;
+var sketchContainer;
 var canvas;
-
-var moon;
 
 function setup() {
   sketchContainer = document.getElementById('sketchContainer');
   canvas = createCanvas(1,1);
   canvas.parent(sketchContainer);
   updateCanvasSize();
-  
-  moon = new Moon();
-  
-  background(220);
+
   frameRate(60);
 
 }
@@ -20,11 +15,6 @@ function setup() {
 function draw() {
   checkResize();
   background(0);
-
-  // circle and moon:
-  fill(255); noStroke();
-  circle(width/2, height/2, 80)
-  moon.show();
 }
 
 function checkResize() {
